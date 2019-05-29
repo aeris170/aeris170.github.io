@@ -1,0 +1,24 @@
+a:link {
+  color: rgb(255, 102, 102);
+}
+
+a:visited {
+  color: rgb(255, 102, 102);
+}
+
+a:active {
+  color: rgb(255, 102, 0);
+}
+
+body {
+  margin: 20px;
+  margin-right: %90;
+  font-family: 'Eczar', serif;
+  background-color: rgb(40, 40, 40);
+  color: rgb(21, 171, 0);
+}
+
+h1 {
+  font-family: 'Eczar', serif;
+  color: rgb(255, 200, 45);
+}
