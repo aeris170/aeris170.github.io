@@ -10,27 +10,16 @@ a:active
 {
 	color: rgb(255,102,0);
 }
-body
-{
-	margin: 5px;
-	margin-right: %90;
+html, body {
+	width:  100%;
+	height: 100%;
+	margin: 0;
 	font-family: 'Eczar', serif;
-	background-color: rgb(40, 40, 40);
-	color: rgb(255,129,0);
+	overflow:hidden;
+	background:#000000
 }
 h1
 {
 	font-family: 'Eczar', serif;
 	color: rgb(255,200,45);
-}
-.green-button{
-  color: black;
-  border: 1px dashed;
-  border-color: rgb(40, 40, 40);
-  background: rgba(28, 184, 65, 0.7);
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  font-size: 90%;
-  font-weight: bolder;
-  padding: 8px 20px;
-  border-radius: 8px;
 }
