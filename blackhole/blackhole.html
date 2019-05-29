@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <meta charset=UTF-8 />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+   <body style="width:100vw; height:100vh; margin:0;overflow:hidden;">
+      <script src="../lib/three/three.min.js"></script>
+      <script src="../lib/three/plugins/GLTFLoader.js"></script>
+      <script src="../lib/three/plugins/OrbitControl.js"></script>
+      <script>
+         let scene, camera, renderer, blackhole;
+
+         function init() {
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x000000);
+            camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 5000);
+            camera.rotation.x = -Math.PI / 6;
+            camera.position.y = 225;
+            camera.position.z = 390;
+            renderer = new THREE.WebGLRenderer({
+               antialias: true
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+            let loader = new THREE.GLTFLoader();
+            loader.load('scene.gltf', function(gltf) {
+               blackhole = gltf.scene.children[0];
+               blackhole.position.y = -20;
+               scene.add(gltf.scene);
+               animate();
+            });
+         }
+
+         function animate() {
+            blackhole.rotation.z += 0.001;
+            renderer.render(scene, camera);
+            requestAnimationFrame(animate);
+         }
+         init();
+      </script>
+      <div style="background-image:url('background.jpg'); opacity:0.3; width:100vw; height:100vh; position:absolute; top:0px; right:0px;">
+      </div>
+   </body>
+
+</html>
