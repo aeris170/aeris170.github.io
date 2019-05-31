@@ -61,6 +61,28 @@
                blackhole.position.y = -20;
                scene.add(gltf.scene);
                animate();
+               $(".slider").delay(1000).animate({
+                  top: '0px',
+                  opacity: '1',
+               }, {
+                  duration: 1000,
+                  easing: 'swing',
+               });
+               $("#canvas-div").animate({
+                  opacity: '1',
+               }, {
+                  duration: 1000,
+                  easing: 'swing',
+               });
+               $(".background").delay(1000).animate({
+                  opacity: '0.3',
+               }, {
+                  duration: 1000,
+                  easing: 'swing',
+               });
+               $(".loader").delay(1000).fadeOut("slow");
+               $(".slides").css("height", window.innerHeight - $(".event-horizon").height() - parseInt($(".event-horizon").css('marginTop')) - parseInt($(".event-horizon").css('marginBottom')));
+               $("div.slides").children().css("height", $(".slides").height());
             });
          }
 
@@ -72,28 +94,7 @@
       </script>
       <script>
          $(document).ready(function() {
-            $(".slider").delay(1000).animate({
-               top: '0px',
-               opacity: '1',
-            }, {
-               duration: 1000,
-               easing: 'swing',
-            });
-            $("#canvas-div").animate({
-               opacity: '1',
-            }, {
-               duration: 1000,
-               easing: 'swing',
-            });
-            $(".background").delay(1000).animate({
-               opacity: '0.3',
-            }, {
-               duration: 1000,
-               easing: 'swing',
-            });
-            $(".loader").delay(1000).fadeOut("slow");
-            $(".slides").css("height", window.innerHeight - $(".event-horizon").height() - parseInt($(".event-horizon").css('marginTop')) - parseInt($(".event-horizon").css('marginBottom')));
-            $("div.slides").children().css("height", $(".slides").height());
+
          });
       </script>
       <div class="wrapper">
