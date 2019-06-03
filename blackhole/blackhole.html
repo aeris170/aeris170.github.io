@@ -35,7 +35,17 @@
       <script src="../lib/three/plugins/OrbitControl.js"></script>
       <script>
          window.onload = function() {
+            history.pushState({
+                  hash: "#slide-1"
+               },
+               "",
+               "");
             init();
+            anchorLinkBackButtonFix();
+         }
+
+         function changeTitle(title) {
+            document.title = title;
          }
       </script>
       <script>
@@ -98,6 +108,23 @@
             $(".background-filter").css("left", (window.innerWidth - $(".background-filter").width()) / 2);
             $("div.slides").children().css("height", $(".slides").height());
          };
+
+         function anchorLinkBackButtonFix() {
+            $(".anchor").click(function(e) {
+               e.preventDefault();
+               $(".slides").scrollLeft($(e.currentTarget.hash).position().left - $("#slide-1").position().left);
+               history.pushState({
+                     hash: e.currentTarget.hash
+                  },
+                  "",
+                  "");
+            });
+
+            window.onpopstate = function(e) {
+               e.preventDefault();
+               $(".slides").scrollLeft($(e.state.hash).position().left - $("#slide-1").position().left);
+            };
+         };
       </script>
       <div class="wrapper">
          <div class="snap background-stripes"></div>
@@ -110,22 +137,22 @@
                <div id="slide-1">
                   This is my personal webpage which I decided to call <b>The Event Horizon</b>.
                   Here are some useful links:
-                  <a href="#slide-2"><button>go to 2</button></a>
+                  <a href="#slide-2" class="anchor" onclick="changeTitle('The Event Horizon | Slide 2'); return false"><button>go to 2</button></a>
                </div>
                <div id="slide-2">
                   second page content
-                  <a href="#slide-3">go to 3</a>
-                  <a href="#slide-3">go to 3</a>
-                  <a href="#slide-3">go to 3</a>
-                  <a href="#slide-3">go to 3</a>
+                  <a href="#slide-3" class="anchor">go to 3</a>
+                  <a href="#slide-3" class="anchor">go to 3</a>
+                  <a href="#slide-3" class="anchor">go to 3</a>
+                  <a href="#slide-3" class="anchor">go to 3</a>
                </div>
                <div id="slide-3">
                   third page content
-                  <a href="#slide-4">go to 4</a>
+                  <a href="#slide-4" class="anchor">go to 4</a>
                </div>
                <div id="slide-4">
                   fourth page content
-                  <a href="#slide-5">go to 5</a>
+                  <a href="#slide-5" class="anchor">go to 5</a>
                </div>
                <div id="slide-5">
                   fifth page content
@@ -141,7 +168,7 @@
                <div class="side"></div>
                <div class="side"></div>
             </div>
-            <label class="w">Loading</label>
+            <label class="loading-label">Loading...</label>
          </div>
       </div>
    </body>

@@ -146,7 +146,7 @@ body {
 }
 
 .cube {
-  margin: auto;
+  margin:auto;
   font-size: 24px;
   height: 3em;
   width: 3em;
@@ -171,7 +171,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: cube-explode 3s infinite ease-in-out;
+  animation: cube-explode 6s infinite ease-in-out;
   opacity: .5;
   background: #ffc82d;
 }
@@ -202,10 +202,10 @@ body {
 
 @keyframes cube-spin {
   0% {
-    transform: rotatex(30deg) rotatey(45deg);
+    transform: rotatex(30deg) rotatey(405deg);
   }
   100% {
-    transform: rotatex(30deg) rotatey(405deg);
+    transform: rotatex(30deg) rotatey(45deg);
   }
 }
 
@@ -236,6 +236,33 @@ body {
 	align-content:center;
 	text-align:center;
 	display:flex;
-  color:yellow;
+  flex-direction: column;
   background: black;
+}
+
+.loading-label {
+  position:relative;
+  bottom:35%;
+  font-size: 1.6rem;
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #ffc82d, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: sliding-fade-text 6s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes sliding-fade-text {
+  from {
+    background-position: -500%;
+  }
+  to {
+    background-position: 500%;
+  }
 }
