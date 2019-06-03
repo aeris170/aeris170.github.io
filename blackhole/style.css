@@ -110,7 +110,7 @@ img {
   height:100%;
   display:block;
 
-  background:transparent url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  background:transparent url('stars.png') repeat top center;
   z-index:0;
 }
 
@@ -241,6 +241,7 @@ body {
 }
 
 .loading-label {
+  /*https://codepen.io/FrankieDoodie/pen/dgVGad*/
   position:relative;
   bottom:35%;
   font-size: 1.6rem;
