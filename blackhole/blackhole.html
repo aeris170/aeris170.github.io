@@ -66,6 +66,14 @@
             });
             renderer.setSize(window.innerWidth, window.innerHeight);
             document.getElementById('canvas-div').appendChild(renderer.domElement);
+            /*https://www.youtube.com/watch?v=r4bepZ2PEUw*/
+            window.addEventListener('resize', () => {
+               let width = window.innerWidth;
+               let height = window.innerHeight;
+               renderer.setSize(width, height);
+               camera.aspect = width / height;
+               camera.updateProjectionMatrix();
+            });
             let loader = new THREE.GLTFLoader();
             loader.load('scene.gltf', function(gltf) {
                blackhole = gltf.scene.children[0];
@@ -124,6 +132,12 @@
                e.preventDefault();
                $(".slides").scrollLeft($(e.state.hash).position().left - $("#slide-1").position().left);
             };
+
+            $(window).resize(() => {
+               $(".slides").css("height", window.innerHeight - $(".event-horizon").height() - parseInt($(".event-horizon").css('marginTop')) - parseInt($(".event-horizon").css('marginBottom')));
+               $(".background-filter").css("left", (window.innerWidth - $(".background-filter").width()) / 2);
+               $("div.slides").children().css("height", $(".slides").height());
+            });
          };
       </script>
       <div class="wrapper">

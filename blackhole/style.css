@@ -146,8 +146,8 @@ body {
 }
 
 .cube {
-  margin:auto;
-  font-size: 24px;
+  margin:auto auto 4.5em auto;
+  font-size: 1.5em;
   height: 3em;
   width: 3em;
   position: relative;
@@ -164,6 +164,7 @@ body {
   right: 0;
   transform-style: preserve-3d;
 }
+
 .side::before {
   content: "";
   position: absolute;
@@ -242,10 +243,7 @@ body {
 
 .loading-label {
   /*https://codepen.io/FrankieDoodie/pen/dgVGad*/
-  position:relative;
-  bottom:35%;
-  font-size: 1.6rem;
-  position: relative;
+  margin-bottom: 10.0625em;
   font-family: sans-serif;
   text-transform: uppercase;
   font-size: 2em;
