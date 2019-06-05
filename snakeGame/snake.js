@@ -39,21 +39,21 @@ var options = {
     'font-family': 'Eczar, serif',
     'text-align': 'center',
     'color': '#15AB00',
-	'width':'50%',
+    'width': '50%',
   },
   'scoreValue': {
     'font-family': 'Eczar, serif',
     'text-align': 'center',
     'font-size': '15px',
     'color': '#15AB00',
-	'width':'20%',
+    'width': '20%',
   },
   'scoreTime': {
     'font-family': 'Eczar, serif',
     'text-align': 'center',
     'font-size': '12px',
     'color': '#15AB00',
-	'width':'30%',
+    'width': '30%',
   },
   'newScoreContainer': {
     'background-color': '#282828',
@@ -88,14 +88,14 @@ var options = {
     'margin-top': '5px',
     'margin-right': '5px',
     'margin-left': '5px',
-	'text-align':'center',
+    'text-align': 'center',
   },
   'newScoreButtons': {
     'border': '1px solid #15AB00',
     'font-family': 'Eczar, serif',
     'background': '#161616',
     'color': '#15AB00',
-	'text-align':'center',
+    'text-align': 'center',
   },
   'dialogButtonPanels': {
     'font-family': 'Eczar, serif',
@@ -124,7 +124,7 @@ var options = {
 };
 
 window.onload = function () {
-	
+
   function resize() {
     var canvas = document.getElementById('snake-canvas');
     var canvasRatio = canvas.height / canvas.width;
@@ -132,17 +132,17 @@ window.onload = function () {
     var width;
     var height;
     if (windowRatio < canvasRatio) {
-        height = window.innerHeight;
-        width = height / canvasRatio;
+      height = window.innerHeight;
+      width = height / canvasRatio;
     } else {
-        width = window.innerWidth;
-        height = width * canvasRatio;
+      width = window.innerWidth;
+      height = width * canvasRatio;
     }
     canvas.style.width = width + 'px';
     canvas.style.height = height + 'px';
   };
   window.addEventListener('resize', resize, false);
-  
+
   var gameLoop = null;
   var scoreboard = null;
   var interval = 100;
@@ -197,9 +197,6 @@ window.onload = function () {
   context.fillText(s, canvas.width - context.measureText(s).width, 90);
   context.fillText(s, 0, canvas.height - 15);
   context.fillText(s, canvas.width - context.measureText(s).width, canvas.height - 15);
-  
-          scoreboard.showScoreBoard();
-          scoreboard.submitNewScoreDialog(tail - 5);
 
   function game() {
     playerX += xVel;
@@ -277,13 +274,13 @@ window.onload = function () {
   function keyPush(evt) {
     switch (evt.keyCode) {
     case 37:
-	  if (!gameStarted) {
-		  loop();
-		  var audio = document.getElementById("music");
-		  audio.volume = 0.2;
-		  audio.play();
-		  gameStarted = true;
-	  }
+      if (!gameStarted) {
+        loop();
+        var audio = document.getElementById("music");
+        audio.volume = 0.2;
+        audio.play();
+        gameStarted = true;
+      }
       if (lastPressed != 39) {
         lastPressed = evt.keyCode;
         xVel = -1;
@@ -291,13 +288,13 @@ window.onload = function () {
       }
       break;
     case 38:
-	  if (!gameStarted) {
-		  loop();
-		  var audio = document.getElementById("music");
-		  audio.volume = 0.2;
-		  audio.play();
-		  gameStarted = true;
-	  }
+      if (!gameStarted) {
+        loop();
+        var audio = document.getElementById("music");
+        audio.volume = 0.2;
+        audio.play();
+        gameStarted = true;
+      }
       if (lastPressed != 40) {
         xVel = 0;
         yVel = -1;
@@ -305,13 +302,13 @@ window.onload = function () {
       }
       break;
     case 39:
-	  if (!gameStarted) {
-		  loop();
-		  var audio = document.getElementById("music");
-		  audio.volume = 0.2;
-		  audio.play();
-		  gameStarted = true;
-	  }
+      if (!gameStarted) {
+        loop();
+        var audio = document.getElementById("music");
+        audio.volume = 0.2;
+        audio.play();
+        gameStarted = true;
+      }
       if (lastPressed != 37) {
         xVel = 1;
         yVel = 0;
@@ -319,13 +316,13 @@ window.onload = function () {
       }
       break;
     case 40:
-	  if (!gameStarted) {
-		  loop();
-		  var audio = document.getElementById("music");
-		  audio.volume = 0.2;
-		  audio.play();
-		  gameStarted = true;
-	  }
+      if (!gameStarted) {
+        loop();
+        var audio = document.getElementById("music");
+        audio.volume = 0.2;
+        audio.play();
+        gameStarted = true;
+      }
       if (lastPressed != 38) {
         xVel = 0;
         yVel = 1;
