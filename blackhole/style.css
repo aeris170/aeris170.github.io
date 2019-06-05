@@ -141,6 +141,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Eczar', serif;
+  font-size: 16px;
   width:100%;
   margin:0;
 }
