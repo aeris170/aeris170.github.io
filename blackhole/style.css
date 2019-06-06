@@ -342,7 +342,7 @@ a.translucent-button:hover {
 .quote {
   font-size: 80%;
   font-weight: 900;
-  padding-left: 10px;
+  padding: 10px 0px 0px 10px;
 }
 
 .author {
