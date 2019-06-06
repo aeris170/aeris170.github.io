@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+a:link {
+  color: rgb(255, 102, 102);
+}
+
+a:visited {
+  color: rgb(255, 102, 102);
+}
+
+a:active {
+  color: rgb(255, 102, 0);
+}
+
 .slider {
   text-align: center;
   overflow: hidden;
@@ -9,6 +21,7 @@
 }
 
 .slides {
+  height: 100%;
   display: flex;
   align-items:flex-start;
   overflow-x: auto;
@@ -41,26 +54,30 @@
   height:100%;
 }
 
-.event-horizon {
-  display:block;
+.page-head {
   width:100%;
-  color:rgba(255, 200, 45, 255);
-  clear:both;
-  margin: 4rem 0rem 4rem 0rem;
+  color:rgba(255, 200, 45, 0.8);
+  margin: 4rem 0rem 2rem 0rem;
 }
 
 .slides > div {
+  height: 100%;
   flex: 0 0 auto;
   scroll-snap-align: start;
   flex-shrink: 0;
   width: 100%;
   margin-right: 50px;
   background: transparent;
-  color:#FFFFFFCF;
+  color:rgba(255, 255, 255, 0.9);
   transform-origin: center center;
   transition: transform 0.5s;
   font-size: 2rem;
   overflow-y: auto;
+  padding: 0rem 8rem 0rem 8rem;
+}
+
+#slide-1 {
+  text-align: left;
 }
 
 .slides > div::-webkit-scrollbar {
@@ -75,27 +92,6 @@
 
 .slides > div::-webkit-scrollbar-track {
   background:#444444;
-}
-
-a:link {
-  color: rgb(255, 102, 102);
-}
-
-a:visited {
-  color: rgb(255, 102, 102);
-}
-
-a:active {
-  color: rgb(255, 102, 0);
-}
-
-img {
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .stars {
@@ -115,7 +111,7 @@ img {
 
 .background-stripes {
   /*background-image:url('background.jpg');*/
-  background-color: #0A0A0A;
+  background-color: rgb(10, 10, 10);
   background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, black 5px, black 10px);
 }
 
@@ -128,6 +124,13 @@ img {
 
 .transparent {
   opacity: 0;
+}
+
+img {
+  max-width:600px;
+  max-height:600px;
+  width: auto;
+  height: auto;
 }
 
 html, body, .wrapper {
@@ -173,7 +176,7 @@ body {
   right: 0;
   animation: cube-explode 6s infinite ease-in-out;
   opacity: .5;
-  background: #ffc82d;
+  background: rgb(255, 200, 45);
 }
 
 .side:nth-child(1) {
@@ -248,7 +251,7 @@ body {
   font-size: 2em;
   letter-spacing: 4px;
   overflow: hidden;
-  background: linear-gradient(90deg, #000, #ffc82d, #000);
+  background: linear-gradient(90deg, black, rgb(255, 200, 45), black);
   background-repeat: no-repeat;
   background-size: 80%;
   animation: sliding-fade-text 6s linear infinite;
@@ -266,7 +269,7 @@ body {
 }
 
 @media all and (min-width: 1200px) {
-    .event-horizon{
+    .page-head{
         font-size: 6rem;
     }
     .slides > div {
@@ -275,7 +278,7 @@ body {
 }
 
 @media all and (max-width: 1999px) and (min-width: 960px) {
-    .event-horizon{
+    .page-head{
         font-size: 4rem;
     }
     .slides > div {
@@ -284,7 +287,7 @@ body {
 }
 
 @media all and (max-width: 959px) and (min-width: 600px) {
-    .event-horizon{
+    .page-head{
         font-size: 3rem;
     }
     .slides > div {
@@ -293,10 +296,64 @@ body {
 }
 
 @media all and (max-width: 599px) and (min-width: 320px) {
-    .event-horizon{
+    .page-head{
         font-size: 2rem;
     }
     .slides > div {
         font-size: 1rem;
     }
+}
+
+a.translucent-button {
+  /*https://fdossena.com/?p=html5cool/buttons/i.frag*/
+   display: inline-block;
+   border: 0.1rem solid rgba(255, 255, 255, 0.9);
+   padding: 0.35rem 1.2rem;
+   margin: 0 0.3rem 0.3rem 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-family: 'Eczar', serif;
+   font-weight: 300;
+   color: rgba(255, 200, 45, 0.8);
+   background-color: rgba(10, 10, 10, 0.5);
+   text-align: center;
+   transition: all 0.6s;
+}
+
+a.translucent-button:hover {
+   background-color: rgba(100, 100, 100, 0.8);
+}
+
+.bouncy {
+  /*https://fdossena.com/?p=html5cool/buttons/i.frag*/
+  animation: bounce 5s infinite linear;
+  position: relative;
+}
+
+@keyframes bounce {
+  0%{top: 0rem}
+  40%{top: 0rem}
+  43%{top: -0.9rem}
+  46%{top: 0rem}
+  48%{top: -0.4rem}
+  50%{top: 0rem}
+  100%{top: 0rem}
+}
+
+.quote-div {
+    color: black;
+    background: rgba(192, 192, 192, 0.8);
+    border-left: 16px solid rgba(192, 192, 192);
+}
+
+.quote {
+  font-size: 80%;
+  font-weight: 900;
+  padding-left: 10px;
+}
+
+.author {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  font-size: 70%;
 }

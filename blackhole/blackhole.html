@@ -4,6 +4,7 @@
    <head>
       <meta charset=UTF-8 />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../lib/normalize/normalize.css">
       <link rel="stylesheet" href="style.css">
       <link rel='shortcut icon' href='../favicon/favicon.ico'>
       <link rel='icon' sizes='16x16 32x32 64x64' href='../favicon/favicon.ico'>
@@ -35,6 +36,7 @@
       <script src="../lib/three/plugins/OrbitControl.js"></script>
       <script>
          window.onload = function() {
+            $(".slides").scrollLeft($("#slide-2").position().left);
             history.pushState({
                   hash: "#slide-1"
                },
@@ -75,7 +77,7 @@
                camera.updateProjectionMatrix();
             });
             let loader = new THREE.GLTFLoader();
-            loader.load('scene.gltf', function(gltf) {
+            loader.load('blackhole/scene.gltf', function(gltf) {
                blackhole = gltf.scene.children[0];
                blackhole.position.y = -20;
                scene.add(gltf.scene);
@@ -112,9 +114,9 @@
                easing: 'swing',
             });
             $(".loader").delay(1000).fadeOut("slow");
-            $(".slides").css("height", window.innerHeight - $(".event-horizon").height() - parseInt($(".event-horizon").css('marginTop')) - parseInt($(".event-horizon").css('marginBottom')));
+            $(".slides").css("height", window.innerHeight);
             $(".background-filter").css("left", (window.innerWidth - $(".background-filter").width()) / 2);
-            $("div.slides").children().css("height", $(".slides").height());
+            $("div.slides").children().css("height", $(".slides").height() - 10);
          };
 
          function anchorLinkBackButtonFix() {
@@ -134,9 +136,9 @@
             };
 
             $(window).resize(() => {
-               $(".slides").css("height", window.innerHeight - $(".event-horizon").height() - parseInt($(".event-horizon").css('marginTop')) - parseInt($(".event-horizon").css('marginBottom')));
+               $(".slides").css("height", window.innerHeight);
                $(".background-filter").css("left", (window.innerWidth - $(".background-filter").width()) / 2);
-               $("div.slides").children().css("height", $(".slides").height());
+               $("div.slides").children().css("height", $(".slides").height() - 10);
             });
          };
       </script>
@@ -146,19 +148,41 @@
          <div class="stars"></div>
          <div id="canvas-div" class="snap transparent"></div>
          <div class="snap slider" style="top:-500px;">
-            <div class="event-horizon"><b>WELCOME TO THE EVENT HORIZON!</b></div>
             <div class="slides">
                <div id="slide-1">
-                  This is my personal webpage which I decided to call <b>The Event Horizon</b>.<br><br>
-                  Here are some useful links:
-                  <a href="#slide-2" class="anchor"><button>go to 2</button></a>
+                  <div class="page-head"><b>ABOUT ME</b></div><br>
+                  <div style="text-align:justify">
+                     My name is Doğa Oruç, I am from Turkey and I live in Ankara, capital of Turkey.
+                     I was born in 1998 in Ankara. I am a senior Computer Science Student studying in
+                     Bilkent University.<br><br>
+                     When I graduate, I plan to work on the video game industry either as a Graphics
+                     Programmer or a Game Programmer. I think games the most complicated piece of
+                     software out there, and if I know one thing about myself, it is that I love myself a challenge!
+                     I will write my name to the video game history with golden letters.
+                  </div><br>
+                  <div class="quote-div">
+                     <p class="quote">
+                        <i>"The world ain't all sunshine and rainbows.<br><br>
+                           You, me or nobody, is gonna hit as hard as life. It's about how hard you can get hit, and keep moving forward...
+                           how much you can take, and keep moving forward. That´s how winning is done!.<br><br>
+                           Now, if you know what you worth, go out and get what you worth. But you gotta be willing to take the hits."</i>
+                     </p>
+                     <p class="author">~Rocky Balboa</p>
+                  </div>
+                  <a href="#slide-2" class="anchor translucent-button bouncy">Home</a>
                </div>
                <div id="slide-2">
-                  second page content
-                  <a href="#slide-3" class="anchor">go to 3</a>
-                  <a href="#slide-3" class="anchor">go to 3</a>
-                  <a href="#slide-3" class="anchor">go to 3</a>
-                  <a href="#slide-3" class="anchor">go to 3</a>
+                  <div class="page-head"><b>WELCOME TO THE EVENT HORIZON!</b></div><br>
+                  Hello and welcome! I'm Doğa Oruç, a young computer science student living in Ankara, Turkey.<br>
+                  This is my personal website and portfolio: here you will find information about me and my projects.<br><br>
+                  I decided to call this website <b>The Event Horizon</b> because I always wanted a personal blackhole :)<br>
+                  I hope you enjoy your stay!<br><br><br>
+                  Sections:<br><br>
+                  <a href="#slide-1" class="anchor translucent-button bouncy">About Me</a>
+                  <a href="#slide-3" class="anchor translucent-button bouncy" style="animation-delay:0.07s">Experiences</a>
+                  <a href="#slide-4" class="anchor translucent-button bouncy" style="animation-delay:0.14s">Skills</a>
+                  <a href="#slide-5" class="anchor translucent-button bouncy" style="animation-delay:0.21s">Projects</a>
+                  <a href="#slide-6" class="anchor translucent-button bouncy" style="animation-delay:0.28s">Contact</a>
                </div>
                <div id="slide-3">
                   third page content
