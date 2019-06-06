@@ -75,8 +75,12 @@ a:active {
   overflow-y: auto;
 }
 
-#slide-1 {
+.aboutme {
   text-align: left;
+}
+
+.contact {
+  text-align: right;
 }
 
 .slides > div::-webkit-scrollbar {
