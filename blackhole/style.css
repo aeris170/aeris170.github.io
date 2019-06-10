@@ -58,6 +58,7 @@ a:active {
   width:100%;
   color:rgba(255, 200, 45, 0.8);
   margin: 4rem 0rem 2rem 0rem;
+  text-transform: uppercase;
 }
 
 .slides > div {
@@ -131,11 +132,12 @@ html, body, .wrapper {
   overflow: hidden;
   background: black;
 }
+
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Eczar', serif;
+  font-family: 'Roboto', sans-serif;
   width:100%;
   margin:0;
 }
@@ -261,46 +263,6 @@ body {
   }
 }
 
-@media all and (min-width: 1200px) {
-    .page-head{
-        font-size: 6rem;
-    }
-    .slides > div {
-        font-size: 3rem;
-        padding: 0rem 8rem 0rem 8rem;
-    }
-}
-
-@media all and (max-width: 1999px) and (min-width: 960px) {
-    .page-head{
-        font-size: 4rem;
-    }
-    .slides > div {
-        font-size: 2rem;
-        padding: 0rem 5.3rem 0rem 5.3rem;
-    }
-}
-
-@media all and (max-width: 959px) and (min-width: 600px) {
-    .page-head{
-        font-size: 3rem;
-    }
-    .slides > div {
-        font-size: 1.5rem;
-        padding: 0rem 4rem 0rem 4rem;
-    }
-}
-
-@media all and (max-width: 599px) and (min-width: 320px) {
-    .page-head{
-        font-size: 2rem;
-    }
-    .slides > div {
-        font-size: 1rem;
-        padding: 0rem 2.6rem 0rem 2.6rem;
-    }
-}
-
 a.translucent-button {
   /*https://fdossena.com/?p=html5cool/buttons/i.frag*/
    display: inline-block;
@@ -309,7 +271,7 @@ a.translucent-button {
    margin: 0 0.3rem 0.3rem 0;
    box-sizing: border-box;
    text-decoration: none;
-   font-family: 'Eczar', serif;
+   font-family: 'Roboto', sans-serif;
    font-weight: 300;
    color: rgba(255, 200, 45, 0.8);
    background-color: rgba(10, 10, 10, 0.5);
@@ -318,7 +280,8 @@ a.translucent-button {
 }
 
 a.translucent-button:hover {
-   background-color: rgba(100, 100, 100, 0.8);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.4);
 }
 
 .bouncy {
@@ -338,19 +301,127 @@ a.translucent-button:hover {
 }
 
 .quote-div {
-    color: black;
-    background: rgba(192, 192, 192, 0.8);
-    border-left: 16px solid rgba(192, 192, 192);
+  color: black;
+  background: rgba(192, 192, 192, 0.8);
+  border-left: 16px solid rgb(192, 192, 192);
+  box-shadow: 0 0 15px 10px  rgba(255, 255, 255, 0.25);
 }
 
 .quote {
+  position: relative;
   font-size: 80%;
+  font-weight: 300;
+  padding: 35px 10px 0px 10px;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+}
+
+.quote::before {
+  position: absolute;
+  top: -15px;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
   font-weight: 900;
-  padding: 10px 0px 0px 10px;
+  content: "“";
+  font-size: 400%;
+  color: rgba(60, 60, 60, 0.4);
 }
 
 .author {
   padding-left: 10px;
   padding-bottom: 10px;
   font-size: 70%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+}
+
+.grid-item {
+  width: 40rem;
+  padding: 1rem 0 1rem 0;
+  margin: 1rem 1rem 1rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  border: 2px solid rgb(255, 255, 255, 0.08);
+  transition: 0.4s ease-in-out;
+  transform: scale(1);
+}
+
+.grid-item:hover {
+  cursor: default;
+  border: 1px solid rgb(0, 0, 0, 0);
+  box-shadow: 0 0 15px 5px rgb(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}
+
+a.grid-item:hover {
+  cursor: pointer;
+}
+
+@media all and (min-width: 2000px) {
+    .page-head{
+        font-size: 4rem;
+    }
+    .slides > div {
+        font-size: 2.5rem;
+        padding: 0rem 5.3rem 4rem 5.3rem;
+    }
+    .grid-container {
+      grid-template-columns: auto auto auto;
+    }
+}
+
+@media all and (max-width: 1999px) and (min-width: 1200px) {
+    .page-head{
+        font-size: 4rem;
+    }
+    .slides > div {
+        font-size: 2rem;
+        padding: 0rem 5.3rem 4rem 5.3rem;
+    }
+}
+
+@media all and (max-width: 1199px) and (min-width: 960px) {
+    .page-head{
+        font-size: 4rem;
+    }
+    .slides > div {
+        font-size: 2rem;
+        padding: 0rem 5.3rem 4rem 5.3rem;
+    }
+    .grid-item {
+      width: 26rem;
+    }
+}
+
+@media all and (max-width: 959px) and (min-width: 600px) {
+    .page-head{
+        font-size: 3rem;
+    }
+    .slides > div {
+        font-size: 1.5rem;
+        padding: 0rem 4rem 4rem 4rem;
+    }
+    .grid-container {
+      grid-template-columns: auto;
+    }
+}
+
+@media all and (max-width: 599px) and (min-width: 320px) {
+    .page-head{
+        font-size: 2rem;
+    }
+    .slides > div {
+        font-size: 1rem;
+        padding: 0rem 2.6rem 4rem 2.6rem;
+    }
+    .grid-container {
+      grid-template-columns: auto;
+    }
+    .grid-item {
+      width: 14rem;
+    }
 }
