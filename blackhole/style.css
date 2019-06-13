@@ -372,6 +372,9 @@ a.grid-item:hover {
     .grid-container {
       grid-template-columns: auto auto auto;
     }
+    .grid-item {
+      width: 30vw;
+    }
 }
 
 @media all and (max-width: 1999px) and (min-width: 1200px) {
@@ -381,6 +384,9 @@ a.grid-item:hover {
     .slides > div {
         font-size: 2rem;
         padding: 0rem 5.3rem 4rem 5.3rem;
+    }
+    .grid-item {
+      width: 45vw;
     }
 }
 
@@ -393,7 +399,7 @@ a.grid-item:hover {
         padding: 0rem 5.3rem 4rem 5.3rem;
     }
     .grid-item {
-      width: 26rem;
+      width: 45vw;
     }
 }
 
@@ -407,6 +413,9 @@ a.grid-item:hover {
     }
     .grid-container {
       grid-template-columns: auto;
+    }
+    .grid-item {
+      width: 85vw;
     }
 }
 
@@ -422,6 +431,6 @@ a.grid-item:hover {
       grid-template-columns: auto;
     }
     .grid-item {
-      width: 14rem;
+      width: 85vw;
     }
 }

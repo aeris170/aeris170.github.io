@@ -37,8 +37,8 @@
 }
 
 .skill-bar[type="Java"]::before {
-  content: "85%";
-  width: calc(85% - 10px);
+  content: "90%";
+  width: calc(90% - 10px);
   background: repeating-linear-gradient(120deg, rgb(203, 131, 28), rgb(203, 131, 28) 30px, rgb(176, 114, 25) 30px, rgb(176, 114, 25) 60px);
 }
 
@@ -47,8 +47,8 @@
 }
 
 .skill-bar[type="C#"]::before {
-  content: "60%";
-  width: calc(60% - 10px);
+  content: "65%";
+  width: calc(65% - 10px);
   background: repeating-linear-gradient(120deg, rgb(29, 171, 0), rgb(29, 171, 0) 30px, rgb(23, 134, 0) 30px, rgb(23, 134, 0) 60px);
 }
 
@@ -57,8 +57,8 @@
 }
 
 .skill-bar[type="C/C++"]::before {
-  content: "50%";
-  width: calc(50% - 10px);background: repeating-linear-gradient(120deg, rgb(244, 92, 137), rgb(244, 92, 137) 30px, rgb(243, 75, 125) 30px, rgb(243, 75, 125) 60px);
+  content: "55%";
+  width: calc(55% - 10px);background: repeating-linear-gradient(120deg, rgb(244, 92, 137), rgb(244, 92, 137) 30px, rgb(243, 75, 125) 30px, rgb(243, 75, 125) 60px);
 }
 
 .skill[type="JavaScript"] {
@@ -66,8 +66,8 @@
 }
 
 .skill-bar[type="JavaScript"]::before {
-  content: "70%";
-  width: calc(70% - 10px);background: repeating-linear-gradient(120deg, rgb(213, 191, 18), rgb(213, 191, 18) 30px, rgb(241, 224, 90) 30px, rgb(241, 224, 90) 60px);
+  content: "80%";
+  width: calc(80% - 10px);background: repeating-linear-gradient(120deg, rgb(213, 191, 18), rgb(213, 191, 18) 30px, rgb(241, 224, 90) 30px, rgb(241, 224, 90) 60px);
 }
 
 .skill[type="HTML/CSS"] {
@@ -75,8 +75,8 @@
 }
 
 .skill-bar[type="HTML/CSS"]::before {
-  content: "75%";
-  width: calc(75% - 10px);background: repeating-linear-gradient(120deg, rgb(132, 0, 255), rgb(132, 0, 255) 30px, rgb(149, 0, 255) 30px, rgb(149, 0, 255) 60px);
+  content: "80%";
+  width: calc(80% - 10px);background: repeating-linear-gradient(120deg, rgb(132, 0, 255), rgb(132, 0, 255) 30px, rgb(149, 0, 255) 30px, rgb(149, 0, 255) 60px);
 }
 
 .skill[type="Python"] {
@@ -84,14 +84,21 @@
 }
 
 .skill-bar[type="Python"]::before {
-  content: "30%";
-  width: calc(30% - 10px);background: repeating-linear-gradient(120deg, rgb(0, 136, 255), rgb(0, 136, 255) 30px, rgb(0, 123, 255) 30px, rgb(0, 123, 255) 60px);
+  content: "20%";
+  width: calc(20% - 10px);background: repeating-linear-gradient(120deg, rgb(0, 136, 255), rgb(0, 136, 255) 30px, rgb(0, 123, 255) 30px, rgb(0, 123, 255) 60px);
 }
 
 @media all and (min-width: 2000px) {
-    .skill-description{
-        font-size: 2rem;
-    }
+  .skill {
+    font-size: 3rem;
+  }
+  .skill-bar {
+    font-size: 2.2rem;
+    border-radius: 60px;
+  }
+  .skill-description{
+    font-size: 2rem;
+  }
 }
 
 @media all and (max-width: 599px) and (min-width: 320px) {
@@ -102,6 +109,6 @@
     font-size: 1.2rem;
   }
   .skill-description{
-      font-size: 1rem;
+    font-size: 1rem;
   }
 }
