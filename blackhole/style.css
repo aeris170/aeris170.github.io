@@ -69,7 +69,8 @@ a:active {
   width: 100%;
   margin-right: 50px;
   background: transparent;
-  color:rgba(255, 255, 255, 0.9);
+  color:rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 10px black;
   transform-origin: center center;
   transition: transform 0.5s;
   font-size: 2rem;
@@ -300,39 +301,6 @@ a.translucent-button:hover {
   100%{top: 0rem}
 }
 
-.quote-div {
-  color: black;
-  background: rgba(192, 192, 192, 0.8);
-  border-left: 16px solid rgb(192, 192, 192);
-  box-shadow: 0 0 15px 10px  rgba(255, 255, 255, 0.25);
-}
-
-.quote {
-  position: relative;
-  font-size: 80%;
-  font-weight: 300;
-  padding: 35px 10px 0px 10px;
-  font-style: italic;
-  font-family: 'Roboto', sans-serif;
-}
-
-.quote::before {
-  position: absolute;
-  top: -15px;
-  box-sizing: border-box;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 900;
-  content: "“";
-  font-size: 400%;
-  color: rgba(60, 60, 60, 0.4);
-}
-
-.author {
-  padding-left: 10px;
-  padding-bottom: 10px;
-  font-size: 70%;
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: auto auto;
@@ -341,7 +309,7 @@ a.translucent-button:hover {
 
 .grid-item {
   width: 40rem;
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0 0 0;
   margin: 1rem 1rem 1rem 1rem;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
@@ -352,9 +320,9 @@ a.translucent-button:hover {
 
 .grid-item:hover {
   cursor: default;
-  border: 1px solid rgb(0, 0, 0, 0);
+  border: 2px solid rgb(0, 0, 0, 0);
   box-shadow: 0 0 15px 5px rgb(255, 255, 255, 0.6);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 a.grid-item:hover {
