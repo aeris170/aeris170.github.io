@@ -1,4 +1,5 @@
-.skill {
+.skill::before {
+  content: attr(type);
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
@@ -16,7 +17,7 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.4);
   color: rgba(40, 40, 40, 0.8);
-  text-shadow: 0 0 10px white;
+  text-shadow: 0 0 1px black, 0 0 10px white;
 }
 
 .skill-description {
@@ -34,7 +35,6 @@
   border-radius: inherit;
   opacity: 0.8;
 }
-
 .skill[type="Java"] {
   color: rgb(176, 114, 25);
 }
@@ -61,7 +61,8 @@
 
 .skill-bar[type="C/C++"]::before {
   content: "55%";
-  width: calc(55% - 10px);background: repeating-linear-gradient(120deg, rgb(244, 92, 137), rgb(244, 92, 137) 30px, rgb(243, 75, 125) 30px, rgb(243, 75, 125) 60px);
+  width: calc(55% - 10px);
+  background: repeating-linear-gradient(120deg, rgb(244, 92, 137), rgb(244, 92, 137) 30px, rgb(243, 75, 125) 30px, rgb(243, 75, 125) 60px);
 }
 
 .skill[type="JavaScript"] {
@@ -70,7 +71,8 @@
 
 .skill-bar[type="JavaScript"]::before {
   content: "80%";
-  width: calc(80% - 10px);background: repeating-linear-gradient(120deg, rgb(213, 191, 18), rgb(213, 191, 18) 30px, rgb(241, 224, 90) 30px, rgb(241, 224, 90) 60px);
+  width: calc(80% - 10px);
+  background: repeating-linear-gradient(120deg, rgb(213, 191, 18), rgb(213, 191, 18) 30px, rgb(241, 224, 90) 30px, rgb(241, 224, 90) 60px);
 }
 
 .skill[type="HTML/CSS"] {
@@ -79,7 +81,8 @@
 
 .skill-bar[type="HTML/CSS"]::before {
   content: "80%";
-  width: calc(80% - 10px);background: repeating-linear-gradient(120deg, rgb(132, 0, 255), rgb(132, 0, 255) 30px, rgb(149, 0, 255) 30px, rgb(149, 0, 255) 60px);
+  width: calc(80% - 10px);
+  background: repeating-linear-gradient(120deg, rgb(132, 0, 255), rgb(132, 0, 255) 30px, rgb(149, 0, 255) 30px, rgb(149, 0, 255) 60px);
 }
 
 .skill[type="Python"] {
@@ -88,11 +91,12 @@
 
 .skill-bar[type="Python"]::before {
   content: "20%";
-  width: calc(20% - 10px);background: repeating-linear-gradient(120deg, rgb(0, 136, 255), rgb(0, 136, 255) 30px, rgb(0, 123, 255) 30px, rgb(0, 123, 255) 60px);
+  width: calc(20% - 10px);
+  background: repeating-linear-gradient(120deg, rgb(0, 136, 255), rgb(0, 136, 255) 30px, rgb(0, 123, 255) 30px, rgb(0, 123, 255) 60px);
 }
 
 @media all and (min-width: 2000px) {
-  .skill {
+  .skill::before {
     font-size: 3rem;
   }
   .skill-bar {
@@ -105,7 +109,7 @@
 }
 
 @media all and (max-width: 599px) and (min-width: 320px) {
-  .skill {
+  .skill::before {
     font-size: 1.6rem;
   }
   .skill-bar {
