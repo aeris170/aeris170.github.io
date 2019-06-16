@@ -1,0 +1,13 @@
+$java-primary: rgb(176, 114, 25);
+$c-sharp-primary: rgb(23, 134, 0);
+$cpp-primary:rgb(243, 75, 125);
+$javascript-primary: rgb(241, 224, 90);
+$html-primary: rgb(149, 0, 255);
+$phyton-primary: rgb(0, 123, 255);
+
+$java-secondary: lighten($java-primary, 10%);
+$c-sharp-secondary: lighten($c-sharp-primary, 10%);
+$cpp-secondary: lighten($cpp-primary, 10%);
+$javascript-secondary: darken($javascript-primary, 20%);
+$html-secondary: darken($html-primary, 20%);
+$phyton-secondary: lighten($phyton-primary, 10%);

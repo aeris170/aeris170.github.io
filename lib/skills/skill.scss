@@ -1,0 +1,122 @@
+@import './colors';
+
+@mixin color-width($width, $first-color, $second-color) {
+  content: "#{$width}";
+  width: calc(#{$width} - 10px);
+  background: repeating-linear-gradient(120deg, $first-color, $first-color 30px, $second-color 30px, $second-color 60px);
+}
+
+.skill {
+  &[type="Java"] {
+    color: $java-primary;
+  }
+
+  &[type="C#"] {
+    color: $c-sharp-primary;
+  }
+
+  &[type="C/C++"] {
+    color: $cpp-primary;
+  }
+
+  &[type="JavaScript"] {
+    color: $javascript-primary;
+  }
+
+  &[type="HTML/CSS"] {
+    color: $html-primary;
+  }
+
+  &[type="Python"] {
+    color: $phyton-primary;
+  }
+
+  &::before {
+    content: attr(type);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+    text-transform: uppercase;
+  }
+}
+
+.skill-bar {
+  background: rgba(255, 255, 255, .4);
+  border-radius: 15px;
+  color: rgba(40, 40, 40, .8);
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 2px;
+  text-align: left;
+  text-shadow: 0 0 1px black, 0 0 10px white;
+
+  &[type="Java"]::before {
+    @include color-width(90%, $java-secondary, $java-primary);
+  }
+
+  &[type="C#"]::before {
+    @include color-width(65%, $c-sharp-secondary, $c-sharp-primary);
+  }
+
+  &[type="C/C++"]::before {
+    @include color-width(55%, $cpp-secondary, $cpp-primary);
+  }
+
+  &[type="JavaScript"]::before {
+    @include color-width(80%, $javascript-secondary, $javascript-primary);
+  }
+
+  &[type="HTML/CSS"]::before {
+    @include color-width(80%, $html-secondary, $html-primary);
+  }
+
+  &[type="Python"]::before {
+    @include color-width(20%, $phyton-secondary, $phyton-primary);
+  }
+
+  &::before {
+    border-radius: inherit;
+    display: inline-block;
+    opacity: .8;
+    padding-right: 10px;
+    text-align: right;
+  }
+}
+
+.skill-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 10px;
+  text-align: justify;
+  text-shadow: 0 0 10px black;
+}
+
+@media all and (min-width: 2000px) {
+  .skill::before {
+    font-size: 3rem;
+  }
+
+  .skill-bar {
+    border-radius: 60px;
+    font-size: 2.2rem;
+  }
+
+  .skill-description {
+    font-size: 2rem;
+  }
+}
+
+@media all and (max-width: 599px) and (min-width: 320px) {
+  .skill::before {
+    font-size: 1.6rem;
+  }
+
+  .skill-bar {
+    font-size: 1.2rem;
+  }
+
+  .skill-description {
+    font-size: 1rem;
+  }
+}

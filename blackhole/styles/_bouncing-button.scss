@@ -1,0 +1,37 @@
+@import './colors';
+
+// https://fdossena.com/?p=html5cool/buttons/i.frag
+
+.translucent-button {
+  background-color: rgba($dark, .5);
+  border: .1rem solid rgba($white, .9);
+  color: rgba($main-orange, .8);
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 0 .3rem .3rem 0;
+  padding: .35rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all .6s;
+
+  &:hover {
+    background-color: rgba($white, .2);
+    box-shadow: 0 0 15px 5px rgba($white, .4);
+  }
+}
+
+.bouncy {
+  animation: bounce 5s infinite linear;
+  position: relative;
+}
+
+@keyframes bounce {
+  0% {top: 0;}
+  40% {top: 0;}
+  43% {top: -.9;}
+  46% {top: 0;}
+  48% {top: -.4rem;}
+  50% {top: 0;}
+  100% {top: 0;}
+}

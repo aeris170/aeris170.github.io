@@ -1,0 +1,81 @@
+@import './colors';
+
+//https://codepen.io/scootman/pen/NMZRNa
+
+.cube {
+  animation: cube-spin 3s infinite ease-in-out alternate;
+  font-size: 1.5em;
+  height: 3em;
+  margin: auto auto 4.5em;
+  position: relative;
+  transform: rotatex(30deg) rotatey(45deg);
+  transform-style: preserve-3d;
+  width: 3em;
+}
+
+.side {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-style: preserve-3d;
+
+  &::before {
+    animation: cube-explode 6s infinite ease-in-out;
+    background: $main-orange;
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@for $i from 1 through 4 {
+	.side:nth-child(#{$i}) {
+		transform: rotatey(90deg * $i);
+	}
+}
+
+.side:nth-child(5) {
+	transform: rotatex(90deg);
+}
+
+.side:nth-child(6) {
+	transform: rotatex(270deg);
+}
+
+@keyframes cube-spin {
+  0% {
+    transform: rotatex(30deg) rotatey(405deg);
+  }
+
+  100% {
+    transform: rotatex(30deg) rotatey(45deg);
+  }
+}
+
+@keyframes cube-explode {
+  from {
+    transform: translatez(.15em) scale(.1);
+  }
+
+  25% {
+    transform: translatez(1.5em) scale(1);
+  }
+
+  50% {
+    transform: translatez(4.5em);
+  }
+
+  75% {
+    transform: translatez(1.5em);
+  }
+
+  to {
+    transform: translatez(.15em) scale(.1);
+  }
+}
