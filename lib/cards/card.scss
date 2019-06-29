@@ -1,0 +1,95 @@
+.flip {
+  border-radius: 5px;
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem 0 0;
+  position: relative;
+
+  > .front,
+  > .back {
+    background-position: center !important;
+    background-size: cover !important;
+    border-radius: inherit;
+    display: block;
+    padding: 1em 2em;
+    transition-duration: .5s;
+    transition-property: transform, opacity;
+    transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+  }
+
+  > .front {
+    transform: rotateY(0deg);
+  }
+
+  > .back {
+    background: #313131D0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: rotateY(-180deg);
+
+    > h2 {
+      color: white;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    > p {
+      color: #999;
+      font-size: .9125rem;
+      line-height: 160%;
+    }
+  }
+
+  &:hover {
+    > .front {
+      transform: rotateY(180deg);
+    }
+
+    > .back {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+@media all and (min-width: 2000px) {
+  .front,
+  .back {
+    height: 60vh;
+    width: 45vw;
+  }
+}
+
+@media all and (max-width: 1999px) and (min-width: 1200px) {
+  .front,
+  .back {
+    height: 41vh;
+    width: 41vw;
+  }
+}
+
+@media all and (max-width: 1199px) and (min-width: 960px) {
+  .front,
+  .back {
+    height: 50vh;
+    width: 75vw;
+  }
+}
+
+@media all and (max-width: 959px) and (min-width: 600px) {
+  .front,
+  .back {
+    height: 45vh;
+    width: 75vw;
+  }
+}
+
+@media all and (max-width: 599px) and (min-width: 320px) {
+  .front,
+  .back {
+    height: 35vh;
+    width: 70vw;
+  }
+}

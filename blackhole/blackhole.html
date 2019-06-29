@@ -135,6 +135,17 @@
                   $(this).addClass("grid-item");
                });
             });
+            $("div.grid-container.animated").each(function() {
+               $(this).children('a').each(function(index) {
+                  $(this).addClass("animated");
+               });
+               $(this).children('div').each(function(index) {
+                  $(this).addClass("animated");
+               });
+            });
+            $(".no-padding").css("padding", 0);
+            $(".no-margin").css("margin", 0);
+            $(".no-border").css("border", 0);
             let lineHeight = parseInt($(".content").css("font-size").slice(0, -2)) * 1.15 + "px";
             $(".content").css("padding-bottom", lineHeight);
             $(".content").css("padding-top", lineHeight);
@@ -227,7 +238,7 @@
                <div id="slide-4">
                   <div class="page-head"><b>Skills</b></div>
                   <div class="content">
-                     <div class="grid-container">
+                     <div class="grid-container animated">
                         <div>
                            <div class="skill" type="Java"></div>
                            <div class="skill-bar" type="Java"></div>
@@ -249,7 +260,7 @@
                            <div class="skill" type="C/C++"></div>
                            <div class="skill-bar" type="C/C++"></div>
                            <div class="skill-description">
-                              I know C well enough. With C++ I need more practive because of how large the language is. I am trying to get better at C++ at the moment. As a group of 4, me and my friends are working on a rendering engine called
+                              I know C well enough. With C++ I need more practice because of how large the language is. I am trying to get better at C++ at the moment. As a group of 4, me and my friends are working on a rendering engine called
                               Chroma
                               written in C++. I use gedit (C) and Visual Studio (C++) for development.
                            </div>
@@ -258,8 +269,8 @@
                            <div class="skill" type="JavaScript"></div>
                            <div class="skill-bar" type="JavaScript"></div>
                            <div class="skill-description">
-                              I have good knowlegde of various JavaScript libraries and API. I use libraries such as jQuery, three.js, p5.js etc. I have also programmed in raw WEBGL for my Computer Graphics course. At the moment I am learning
-                              Node.js
+                              I have good knowledge of various JavaScript libraries and API. I use libraries such as jQuery, three.js, p5.js etc. I have also programmed in raw WEBGL for my Computer Graphics course. At the moment I am learning
+                              how to use Node.js
                               and Vue.js. I use Atom for development.
                            </div>
                         </div>
@@ -287,6 +298,170 @@
                </div>
                <div id="slide-5">
                   <div class="page-head"><b>Projects</b></div>
+                  <div class="content">
+                     <div class="grid-container-auto-size">
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(https://raw.githubusercontent.com/aeris170/CS319-MP-Risk/master/res/github%20pic.png)">
+                           </div>
+                           <div class="back">
+                              <h2>RISK: Digital Cut</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(media/projects/doaengine.png)">
+                           </div>
+                           <div class="back">
+                              <h2>DoaEngine</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(https://raw.githubusercontent.com/aeris170/LWJGLGameEngine/master/screenshots/night.png)">
+                           </div>
+                           <div class="back">
+                              <h2>LWJGL Game Engine</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(https://user-images.githubusercontent.com/25724155/55695248-61263e80-59c0-11e9-80fe-9abb722e82ac.png)">
+                           </div>
+                           <div class="back">
+                              <h2>Dark Side of MARS</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url()">
+                           </div>
+                           <div class="back">
+                              <h2>16 Games</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url()">
+                           </div>
+                           <div class="back">
+                              <h2>Homeward</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(media/projects/simplecityscapegenerator.png)">
+                           </div>
+                           <div class="back">
+                              <h2>Simple Cityscape Generator</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(media/projects/antanimator.png)">
+                           </div>
+                           <div class="back">
+                              <h2>Ant Animator</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(media/projects/superquadricrenderer.png)">
+                           </div>
+                           <div class="back">
+                              <h2>Superquadric Renderer</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(https://user-images.githubusercontent.com/25724155/54490785-0c643c00-48ca-11e9-9fa7-58742304ee64.png)">
+                           </div>
+                           <div class="back">
+                              <h2>Tiger Tooth Chess</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(https://user-images.githubusercontent.com/25724155/55662400-7746ca00-581b-11e9-9d0d-e33740dc0d7e.png)">
+                           </div>
+                           <div class="back">
+                              <h2>Color Blindness Simulator</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(https://user-images.githubusercontent.com/25724155/54485648-495e0d80-488d-11e9-9c41-6636662100f3.png)">
+                           </div>
+                           <div class="back">
+                              <h2>Admiral is on Board</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(https://user-images.githubusercontent.com/25724155/54486053-bffe0980-4893-11e9-87df-c2b4c5f254f7.png)">
+                           </div>
+                           <div class="back">
+                              <h2>Solitaire</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(https://user-images.githubusercontent.com/25724155/54489182-c489e880-48ba-11e9-8d5d-85c00a77a8ad.png)">
+                           </div>
+                           <div class="back">
+                              <h2>Crosshair Overlay</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(https://user-images.githubusercontent.com/25724155/54485829-f1290a80-4890-11e9-92c4-701f0ff3a91b.png)">
+                           </div>
+                           <div class="back">
+                              <h2>Purple Rain</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(https://user-images.githubusercontent.com/25724155/55772301-4cb37600-5a94-11e9-804d-21a79a79e2e3.png)">
+                           </div>
+                           <div class="back">
+                              <h2>Project: Time()</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url()">
+                           </div>
+                           <div class="back">
+                              <h2>FPGA Motor Game</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(https://user-images.githubusercontent.com/25724155/55694654-c593ce80-59bd-11e9-9733-3667a022a216.png)">
+                           </div>
+                           <div class="back">
+                              <h2>The Chronicles of the Revenant Assassin</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url()">
+                           </div>
+                           <div class="back">
+                              <h2>Tile Based RougeLike RPG Game</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                        <div class="flip no-padding no-border">
+                           <div class="front" style="background-image: url(https://user-images.githubusercontent.com/25724155/60385503-8d6acc00-9a92-11e9-82d5-c8207d7f34e0.png)">
+                           </div>
+                           <div class="back">
+                              <h2>thanos.jar</h2>
+                              <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                   <div class="buttons">
                      <a href="#slide-2">Home</a>
                      <a href="#slide-4">Skills</a>

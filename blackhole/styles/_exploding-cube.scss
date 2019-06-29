@@ -35,17 +35,17 @@
 }
 
 @for $i from 1 through 4 {
-	.side:nth-child(#{$i}) {
-		transform: rotatey(90deg * $i);
+  .side:nth-child(#{$i}) {
+    transform: rotatey(90deg * $i);
 	}
 }
 
 .side:nth-child(5) {
-	transform: rotatex(90deg);
+  transform: rotatex(90deg);
 }
 
 .side:nth-child(6) {
-	transform: rotatex(270deg);
+  transform: rotatex(270deg);
 }
 
 @keyframes cube-spin {
