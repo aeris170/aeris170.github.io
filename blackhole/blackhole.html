@@ -40,13 +40,9 @@
       <script src="../lib/three/plugins/OrbitControl.js"></script>
       <script>
          window.onload = function() {
-            $(".slides").scrollLeft($("#slide-2").position().left);
-            history.pushState({
-                  hash: "#slide-1"
-               },
-               "",
-               "");
+            $(".slides").scrollLeft($("#home").position().left);
             init();
+            history.replaceState('', 'Home', '#home');
             anchorLinkBackButtonFix();
          }
 
@@ -154,28 +150,22 @@
          function anchorLinkBackButtonFix() {
             $(".anchor").click(function(e) {
                e.preventDefault();
-               $(".slides").scrollLeft($(e.currentTarget.hash).position().left - $("#slide-1").position().left);
-               history.pushState({
-                     hash: e.currentTarget.hash
-                  },
-                  "",
-                  "");
             });
 
-            window.onpopstate = function(e) {
-               e.preventDefault();
-               $(".slides").scrollLeft($(e.state.hash).position().left - $("#slide-1").position().left);
-            };
-
-            $(window).resize(() => {
-               $(".slides").css("height", window.innerHeight);
-               $(".background-filter").css("left", (window.innerWidth - $(".background-filter").width()) / 2);
-               $("div.slides").children().css("height", $(".slides").height() - 10);
-               let lineHeight = parseInt($(".content").css("font-size").slice(0, -2)) * 1.15 + "px";
-               $(".content").css("padding-bottom", lineHeight);
-               $(".content").css("padding-top", lineHeight);
+            $(window).on('hashchange', function (e) {
+              e.preventDefault();
+              $(".slides").scrollLeft($(window.location.hash).position().left - $("#about").position().left);
             });
-         };
+          };
+
+          $(window).resize(() => {
+             $(".slides").css("height", window.innerHeight);
+             $(".background-filter").css("left", (window.innerWidth - $(".background-filter").width()) / 2);
+             $("div.slides").children().css("height", $(".slides").height() - 10);
+             let lineHeight = parseInt($(".content").css("font-size").slice(0, -2)) * 1.15 + "px";
+             $(".content").css("padding-bottom", lineHeight);
+             $(".content").css("padding-top", lineHeight);
+          });
       </script>
       <div class="wrapper">
          <div class="background-stripes"></div>
@@ -184,7 +174,7 @@
          <div id="canvas-div" class="fullscreen transparent"></div>
          <div class="slider" style="top:-500px;">
             <div class="slides">
-               <div id="slide-1" class="aboutme">
+               <div id="about" class="aboutme">
                   <div class="page-head"><b>About Me</b></div>
                   <div class="content" style="text-align:justify">
                      My name is Doğa Oruç, I am from Turkey and I live in Ankara, capital of Turkey.
@@ -205,10 +195,10 @@
                      </div>
                   </div>
                   <div class="buttons">
-                     <a href="#slide-2">Home</a>
+                     <a href="#home">Home</a>
                   </div>
                </div>
-               <div id="slide-2">
+               <div id="home">
                   <div class="page-head"><b>Welcome to the Event Horizon!</b></div>
                   <div class="content">
                      Hello and welcome! I'm Doğa Oruç, a young computer science student living in Ankara, Turkey.<br>
@@ -218,24 +208,24 @@
                      Sections:
                   </div>
                   <div class="buttons">
-                     <a href="#slide-1">About Me</a>
-                     <a href="#slide-3">Experiences</a>
-                     <a href="#slide-4">Skills</a>
-                     <a href="#slide-5">Projects</a>
-                     <a href="#slide-6">Contact</a>
+                     <a href="#about">About Me</a>
+                     <a href="#experiences">Experiences</a>
+                     <a href="#skills">Skills</a>
+                     <a href="#projects">Projects</a>
+                     <a href="#contact">Contact</a>
                   </div>
                </div>
-               <div id="slide-3">
+               <div id="experiences">
                   <div class="page-head"><b>Experiences</b></div>
                   <div class="content">
                      okul-staj-lab ıvır zıvır
                   </div>
                   <div class="buttons">
-                     <a href="#slide-2">Home</a>
-                     <a href="#slide-4">Skills</a>
+                     <a href="#home">Home</a>
+                     <a href="#skills">Skills</a>
                   </div>
                </div>
-               <div id="slide-4">
+               <div id="skills">
                   <div class="page-head"><b>Skills</b></div>
                   <div class="content">
                      <div class="grid-container animated">
@@ -291,12 +281,12 @@
                      </div>
                   </div>
                   <div class="buttons">
-                     <a href="#slide-2">Home</a>
-                     <a href="#slide-3">Experiences</a>
-                     <a href="#slide-5">Projects</a>
+                     <a href="#home">Home</a>
+                     <a href="#experiences">Experiences</a>
+                     <a href="#projects">Projects</a>
                   </div>
                </div>
-               <div id="slide-5">
+               <div id="projects">
                   <div class="page-head"><b>Projects</b></div>
                   <div class="content">
                      <div class="grid-container-auto-size">
@@ -471,16 +461,16 @@
                      </div>
                   </div>
                   <div class="buttons">
-                     <a href="#slide-2">Home</a>
-                     <a href="#slide-4">Skills</a>
-                     <a href="#slide-6">Contact</a>
+                     <a href="#home">Home</a>
+                     <a href="#skills">Skills</a>
+                     <a href="#contact">Contact</a>
                   </div>
                </div>
-               <div id="slide-6" class="contact">
+               <div id="contact" class="contact">
                   <div class="page-head"><b>Contact</b></div>
                   <div class="buttons">
-                     <a href="#slide-2">Home</a>
-                     <a href="#slide-5">Projects</a>
+                     <a href="#home">Home</a>
+                     <a href="#projects">Projects</a>
                   </div>
                </div>
             </div>
