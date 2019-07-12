@@ -37,7 +37,6 @@
 
     > p {
       color: #999;
-      font-size: .9125rem;
       line-height: 160%;
     }
   }
@@ -57,39 +56,74 @@
 @media all and (min-width: 2000px) {
   .front,
   .back {
-    height: 60vh;
     width: 45vw;
+
+    > h2 {
+      font-size: 4.5rem;
+    }
+
+    > p {
+      font-size: 1.8rem;
+    }
   }
 }
 
 @media all and (max-width: 1999px) and (min-width: 1200px) {
   .front,
   .back {
-    height: 41vh;
     width: 41vw;
+
+    > h2 {
+      font-size: 2rem;
+    }
+
+    > p {
+      font-size: 1rem;
+    }
   }
 }
 
 @media all and (max-width: 1199px) and (min-width: 960px) {
   .front,
   .back {
-    height: 50vh;
     width: 75vw;
+
+    > h2 {
+      font-size: 2.6rem;
+    }
+
+    > p {
+      font-size: 1.2rem;
+    }
   }
 }
 
 @media all and (max-width: 959px) and (min-width: 600px) {
   .front,
   .back {
-    height: 45vh;
-    width: 75vw;
+    width: 85vw;
+
+    > h2 {
+      font-size: 1.8rem;
+    }
+
+    > p {
+      font-size: 1rem;
+    }
   }
 }
 
 @media all and (max-width: 599px) and (min-width: 320px) {
   .front,
   .back {
-    height: 35vh;
-    width: 70vw;
+    width: 85vw;
+
+    > h2 {
+      font-size: 1rem;
+    }
+
+    > p {
+      font-size: .6rem;
+    }
   }
 }

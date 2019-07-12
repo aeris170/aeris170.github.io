@@ -145,6 +145,8 @@
             let lineHeight = parseInt($(".content").css("font-size").slice(0, -2)) * 1.15 + "px";
             $(".content").css("padding-bottom", lineHeight);
             $(".content").css("padding-top", lineHeight);
+            $(".back").height($(".back").width() / 2);
+            $(".front").height($(".front").width() / 2);
          };
 
          function anchorLinkBackButtonFix() {
@@ -165,6 +167,8 @@
              let lineHeight = parseInt($(".content").css("font-size").slice(0, -2)) * 1.15 + "px";
              $(".content").css("padding-bottom", lineHeight);
              $(".content").css("padding-top", lineHeight);
+             $(".back").height($(".back").width() / 2);
+             $(".front").height($(".front").width() / 2);
           });
       </script>
       <div class="wrapper">
