@@ -1,13 +1,13 @@
 //COMPILE
 
-@import '../lib/skills/skill';
-@import '../lib/cards/card';
+@import 'lib/skills/skill';
+@import 'lib/cards/card';
 
-@import './styles/colors';
-@import './styles/loader';
-@import './styles/background';
-@import './styles/bouncing-button';
-@import './styles/exploding-cube';
+@import './extra_styles/colors';
+@import './extra_styles/loader';
+@import './extra_styles/background';
+@import './extra_styles/bouncing-button';
+@import './extra_styles/exploding-cube';
 
 @mixin scrollbar() {
   &::-webkit-scrollbar {
