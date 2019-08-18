@@ -128,7 +128,15 @@
                   $(this).addClass("grid-item");
                });
                $(this).children('div').each(function(index) {
-                  $(this).addClass("grid-item");
+                 $(this).addClass("grid-item");
+               });
+            });
+            $("div.exp-grid-container").each(function() {
+               $(this).children('a').each(function(index) {
+                  $(this).addClass("exp-grid-item");
+               });
+               $(this).children('div').each(function(index) {
+                 $(this).addClass("exp-grid-item");
                });
             });
             $("div.grid-container.animated").each(function() {
@@ -222,7 +230,44 @@
                <div id="experiences">
                   <div class="page-head"><b>Experiences</b></div>
                   <div class="content">
-                     okul-staj-lab ıvır zıvır
+                     <div class="exp-grid-container">
+                        <div class="right">
+                           <div class="experience">
+                              <div class="exp-title">
+                                 TUBITAK BILGEM ILTAREN
+                              </div>
+                              <div class="exp-date">
+                                 Summer Intern @ Software Development Team<br>
+                                 16/07/2019 - 15/08/2019
+                              </div>
+                              <br>
+                              <div class="exp-detail">
+                                 TEST TEST TESTTEEST<br>
+                                 TEST TEST TESTTEEST<br>
+                                 TEST TEST TESTTEEST<br>
+                                 TEST TEST TESTTEEST<br>
+                                 TEST TEST TESTTEEST<br>
+                                 TEST TEST TESTTEEST<br>
+                              </div>
+                           </div>
+                           <div class="image"><img src="images/bilgem_logo.jpg" alt="Bilgem Logo"></div>
+                        </div>
+                        <div class="left">
+                           <div class="image"><img src="images/taleworlds_logo.png" alt="Taleworlds Logo"></div>
+                           <div class="experience">
+                              <div class="exp-title">
+                                 Taleworlds Entertainment
+                              </div>
+                              <div class="exp-date">
+                                 Summer Intern @ Game Engine Design Team<br>
+                                 30/07/2018 - 14/09/2018
+                              </div>
+                              <br>
+                              <div class="exp-detail">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
                   <div class="buttons">
                      <a href="#home">Home</a>
@@ -246,8 +291,8 @@
                            <div class="skill" type="C#"></div>
                            <div class="skill-bar" type="C#"></div>
                            <div class="skill-description">
-                              While working at TaleWorlds Entertainment as an intern, I had the chance to try C#. I liked the language simply because how close it was to Java. I am still learning the semantics of this language and trying to develop
-                              small apps. I use Visual Studio for development.
+                              In both my internships, I heavily used C#. I liked the language because the syntax and the style resembled Java. However, I later found out the two languages are completely different. I am still learning the semantics
+                              of this language and trying to develop small apps. I use Visual Studio for development.
                            </div>
                         </div>
                         <div>

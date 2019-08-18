@@ -127,6 +127,55 @@
   }
 }
 
+.exp-grid-container {
+  display: grid;
+  grid-template-columns: auto;
+
+  > .exp-grid-item {
+    background: rgba($white, .2);
+    border: 2px solid rgba($white, .08);
+    border-radius: 5px;
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+
+    > .experience {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+    }
+
+    > .image {
+      width: 20%;
+
+      > img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  > .exp-grid-item.right {
+    justify-content: space-between;
+
+    > .image {
+      margin-left: 1rem;
+    }
+  }
+
+  > .exp-grid-item.left {
+    justify-content: flex-start;
+
+    > .image {
+      margin-right: 1rem;
+    }
+  }
+
+  > a.grid-item:hover {
+    cursor: pointer;
+  }
+}
+
 @media all and (min-width: 2000px) {
   .page-head {
     font-size: 4rem;
@@ -148,6 +197,20 @@
   .grid-item {
     width: 30vw;
   }
+
+  .experience {
+    > .exp-title {
+      font-size: 4rem;
+    }
+
+    > .exp-date {
+      font-size: 2.5rem;
+    }
+
+    > .exp-detail {
+      font-size: 2rem;
+    }
+  }
 }
 
 @media all and (max-width: 1999px) and (min-width: 1200px) {
@@ -167,6 +230,20 @@
   .grid-item {
     width: 45vw;
   }
+
+  .experience {
+    > .exp-title {
+      font-size: 3.5rem;
+    }
+
+    > .exp-date {
+      font-size: 1.65rem;
+    }
+
+    > .exp-detail {
+      font-size: 1rem;
+    }
+  }
 }
 
 @media all and (max-width: 1199px) and (min-width: 960px) {
@@ -185,6 +262,20 @@
 
   .grid-item {
     width: 45vw;
+  }
+
+  .experience {
+    > .exp-title {
+      font-size: 2.5rem;
+    }
+
+    > .exp-date {
+      font-size: 1.1rem;
+    }
+
+    > .exp-detail {
+      font-size: .75rem;
+    }
   }
 }
 
@@ -209,6 +300,28 @@
   .grid-item {
     width: 85vw;
   }
+
+  #experiences {
+    padding: 0;
+  }
+
+  .image {
+    width: 30% !important; //help me :(
+  }
+
+  .experience {
+    > .exp-title {
+      font-size: 2rem;
+    }
+
+    > .exp-date {
+      font-size: .9rem;
+    }
+
+    > .exp-detail {
+      font-size: .9rem;
+    }
+  }
 }
 
 @media all and (max-width: 599px) and (min-width: 320px) {
@@ -231,5 +344,26 @@
 
   .grid-item {
     width: 85vw;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .experience {
+    > .exp-title {
+      font-size: 1.45rem;
+      text-align: justify;
+    }
+
+    > .exp-date {
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    > .exp-detail {
+      font-size: 1rem;
+      text-align: justify;
+    }
   }
 }

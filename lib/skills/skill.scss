@@ -56,7 +56,7 @@
   }
 
   &[type="C#"]::before {
-    @include color-width(65%, $c-sharp-secondary, $c-sharp-primary);
+    @include color-width(75%, $c-sharp-secondary, $c-sharp-primary);
   }
 
   &[type="C/C++"]::before {
