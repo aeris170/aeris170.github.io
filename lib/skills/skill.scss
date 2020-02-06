@@ -4,6 +4,14 @@
   content: "#{$width}";
   width: calc(#{$width} - 10px);
   background: repeating-linear-gradient(120deg, $first-color, $first-color 30px, $second-color 30px, $second-color 60px);
+  background-size: 200% 200%;
+  animation: barberpole 10s linear infinite reverse;
+}
+
+@keyframes barberpole {
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 .skill {
