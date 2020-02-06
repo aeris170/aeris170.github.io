@@ -52,7 +52,7 @@
   text-shadow: 0 0 1px black, 0 0 10px white;
 
   &[type="Java"]::before {
-    @include color-width(90%, $java-secondary, $java-primary);
+    @include color-width(95%, $java-secondary, $java-primary);
   }
 
   &[type="C#"]::before {
@@ -60,7 +60,7 @@
   }
 
   &[type="C/C++"]::before {
-    @include color-width(55%, $cpp-secondary, $cpp-primary);
+    @include color-width(85%, $cpp-secondary, $cpp-primary);
   }
 
   &[type="JavaScript"]::before {
