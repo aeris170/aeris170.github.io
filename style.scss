@@ -112,18 +112,6 @@ strong {
     border-radius: 5px;
     margin: 1rem;
     padding: 1rem 0 0;
-
-    > .animated {
-      transform: scale(1);
-      transition: .4s ease-in-out;
-
-      &:hover {
-        border: 2px solid $transparent;
-        box-shadow: 0 0 15px 5px rgba($white, .6);
-        cursor: default;
-        transform: scale(1.05);
-      }
-    }
   }
 
   > a.grid-item:hover {
