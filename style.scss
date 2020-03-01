@@ -152,10 +152,16 @@ strong {
     }
 
     > .image {
+      margin: 10px 0;
+      overflow: hidden;
+      position: relative;
       width: 15%;
 
       > img {
-        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         width: 100%;
       }
     }
