@@ -39,6 +39,22 @@
     color: $phyton-primary;
   }
 
+  &[type="OpenGL"] {
+    color: $opengl-primary;
+  }
+
+  &[type="LWJGL"] {
+    color: $lwjgl-primary;
+  }
+
+  &[type="Unity"] {
+    color: $unity-primary;
+  }
+
+  &[type="Godot"] {
+    color: $godot-primary;
+  }
+
   &::before {
     content: attr(type);
     font-size: 2rem;
@@ -60,19 +76,19 @@
   text-shadow: 0 0 1px black, 0 0 10px white;
 
   &[type="Java"]::before {
-    @include color-width(95%, $java-secondary, $java-primary);
+    @include color-width(94%, $java-secondary, $java-primary);
   }
 
   &[type="C#"]::before {
-    @include color-width(75%, $c-sharp-secondary, $c-sharp-primary);
+    @include color-width(72%, $c-sharp-secondary, $c-sharp-primary);
   }
 
   &[type="C/C++"]::before {
-    @include color-width(85%, $cpp-secondary, $cpp-primary);
+    @include color-width(86%, $cpp-secondary, $cpp-primary);
   }
 
   &[type="JavaScript"]::before {
-    @include color-width(80%, $javascript-secondary, $javascript-primary);
+    @include color-width(81%, $javascript-secondary, $javascript-primary);
   }
 
   &[type="HTML/CSS"]::before {
@@ -80,7 +96,23 @@
   }
 
   &[type="Python"]::before {
-    @include color-width(20%, $phyton-secondary, $phyton-primary);
+    @include color-width(19%, $phyton-secondary, $phyton-primary);
+  }
+
+  &[type="OpenGL"]::before {
+    @include color-width(79%, $opengl-secondary, $opengl-primary);
+  }
+
+  &[type="LWJGL"]::before {
+    @include color-width(80%, $lwjgl-secondary, $lwjgl-primary);
+  }
+
+  &[type="Unity"]::before {
+    @include color-width(73%, $unity-secondary, $unity-primary);
+  }
+
+  &[type="Godot"]::before {
+    @include color-width(88%, $godot-secondary, $godot-primary);
   }
 
   &::before {
