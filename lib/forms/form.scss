@@ -1,0 +1,38 @@
+@import '../../extra_styles/colors';
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input.left {
+  margin-right: 10px;
+}
+
+input.right {
+  margin-left: 10px;
+}
+
+textarea {
+  height: 35vh;
+}
+
+input[type=submit] {
+  background-color: $main-orange;
+  border: 0;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+  padding: 12px 20px;
+
+  &:hover {
+    background-color: darken($main-orange, 10%);
+  }
+}

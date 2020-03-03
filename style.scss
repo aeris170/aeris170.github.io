@@ -1,8 +1,7 @@
 //COMPILE
-
 @import 'lib/skills/skill';
 @import 'lib/cards/card';
-
+@import 'lib/forms/form';
 @import './extra_styles/colors';
 @import './extra_styles/loader';
 @import './extra_styles/background';
@@ -25,13 +24,13 @@
   }
 }
 
-.transparent,
-%transparent {
+%transparent,
+.transparent {
   opacity: 0;
 }
 
-.fullscreen,
-%fullscreen {
+%fullscreen,
+.fullscreen {
   height: 100%;
   left: 0;
   position: fixed;
@@ -80,7 +79,7 @@ strong {
     scroll-snap-align: start;
     text-shadow: 0 0 10px $black;
     transform-origin: center center;
-    transition: all transform .5s;
+    transition: all transform 0.5s;
     width: 100%;
   }
 }
@@ -98,6 +97,39 @@ strong {
 
 .contact {
   text-align: right;
+
+  > .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    > form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+    }
+
+    > .links {
+      align-content: flex-end;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      > .link {
+        padding: 10px;
+
+        > a {
+          color: white;
+
+          &:visited {
+            color: white;
+          }
+        }
+      }
+    }
+  }
 }
 
 .grid-container,
@@ -139,7 +171,7 @@ strong {
       > .exp-title {
         font-weight: 600;
         text-decoration: underline;
-        color: rgba($main-orange, .8)
+        color: rgba($main-orange, .8);
       }
 
       > .exp-date {
@@ -187,7 +219,6 @@ strong {
     cursor: pointer;
   }
 }
-
 @media all and (min-width: 2000px) {
   .page-head {
     font-size: 4rem;
@@ -224,7 +255,6 @@ strong {
     }
   }
 }
-
 @media all and (max-width: 1999px) and (min-width: 1200px) {
   .page-head {
     font-size: 4rem;
@@ -257,7 +287,6 @@ strong {
     }
   }
 }
-
 @media all and (max-width: 1199px) and (min-width: 960px) {
   .page-head {
     font-size: 4rem;
@@ -286,11 +315,10 @@ strong {
     }
 
     > .exp-detail {
-      font-size: .75rem;
+      font-size: 0.75rem;
     }
   }
 }
-
 @media all and (max-width: 959px) and (min-width: 600px) {
   .page-head {
     font-size: 3rem;
@@ -327,15 +355,14 @@ strong {
     }
 
     > .exp-date {
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
 
     > .exp-detail {
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
   }
 }
-
 @media all and (max-width: 599px) and (min-width: 320px) {
   .page-head {
     font-size: 2rem;
