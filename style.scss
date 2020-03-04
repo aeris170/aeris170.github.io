@@ -169,9 +169,9 @@ strong {
       flex-direction: column;
 
       > .exp-title {
+        color: rgba($main-orange, .8);
         font-weight: 600;
         text-decoration: underline;
-        color: rgba($main-orange, .8);
       }
 
       > .exp-date {

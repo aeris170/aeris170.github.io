@@ -2,14 +2,23 @@
 
 input,
 textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  background: rgba($white, .2);
+  border: 2px solid rgba($white, .08);
+  border-radius: 5px;
   box-sizing: border-box;
-  margin-top: 6px;
+  color: $white;
   margin-bottom: 16px;
+  margin-top: 6px;
+  outline: none;
+  padding: 12px;
   resize: vertical;
+  transition: background-color .6s, box-shadow .6s;
+  width: 100%;
+
+  &:focus {
+    background-color: rgba($white, .25);
+    box-shadow: 0 0 15px 5px rgba($white, .4);
+  }
 }
 
 input.left {
@@ -28,11 +37,11 @@ input[type=submit] {
   background-color: $main-orange;
   border: 0;
   border-radius: 4px;
-  color: black;
+  color: $black;
   cursor: pointer;
   padding: 12px 20px;
 
   &:hover {
-    background-color: darken($main-orange, 10%);
+    background-color: darken($main-orange, 20%);
   }
 }
