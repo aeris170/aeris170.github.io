@@ -122,9 +122,14 @@ strong {
 
         > a {
           color: white;
+          transition: all ease-out .4s;
 
           &:visited {
             color: white;
+          }
+
+          &:hover {
+            text-shadow: 0 0 15px $white;
           }
         }
       }
