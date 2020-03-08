@@ -40,6 +40,7 @@
       <script type="text/javascript" src="lib/three/plugins/GLTFLoader.js"></script>
       <script type="text/javascript" src="lib/three/plugins/OrbitControl.js"></script>
       <script type="text/javascript" src="lib/tween/Tween.js"></script>
+      <script type="text/javascript" src="validateForm.js"></script>
       <script>
          window.onload = function() {
           $(".slides").scrollLeft($("#home").position().left);
@@ -919,12 +920,12 @@
                <div id="contact" class="contact">
                   <div class="page-head"><b>Contact</b></div>
                   <div class="content">
-                     <form action="https://formspree.io/aeris170@gmail.com" method="POST">
+                     <form action="https://formspree.io/aeris170@gmail.com" method="POST" onsubmit="return validate(this)">
                         <div style="display: flex;">
-                           <input type="text" name="name" placeholder="Your Name" class="left">
-                           <input type="email" name="_replyto" placeholder="Your E-Mail" class="right">
+                           <input type="text" name="name" placeholder="Your Name" class="left" oninput="inputListener(this)">
+                           <input type="text" name="_replyto" placeholder="Your E-Mail" class="right" oninput="inputListener(this)">
                         </div>
-                        <textarea name="message" placeholder="Type your message here!"></textarea>
+                        <textarea name="message" placeholder="Type your message here!" oninput="inputListener(this)"></textarea>
                         <input type="submit" value="Send">
                      </form>
                      <div class="links">

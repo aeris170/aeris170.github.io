@@ -21,6 +21,10 @@ textarea {
   }
 }
 
+.glow-red {
+  box-shadow: 0 0 15px 5px rgba(red, .8);
+}
+
 input.left {
   margin-right: 10px;
 }
