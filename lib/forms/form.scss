@@ -48,4 +48,8 @@ input[type=submit] {
   &:hover {
     background-color: darken($main-orange, 20%);
   }
+
+  &:focus {
+    box-shadow: none;
+  }
 }
