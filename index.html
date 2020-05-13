@@ -5,8 +5,8 @@
       <meta charset=UTF-8 />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=latin-ext" rel="stylesheet">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <link rel="stylesheet" href="lib/googlefonts/all.css" rel="stylesheet">
+      <link rel="stylesheet" href="lib/fontawesome/all.css">
       <link rel="stylesheet" href="lib/normalize/normalize.css">
       <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="lib/quote/quote.css">
@@ -34,15 +34,16 @@
    </head>
 
    <body>
-      <script src="https://kit.fontawesome.com/db99d1f68d.js" crossorigin="anonymous"></script>
+      <script async type="text/javascript" src="lib/fontawesome/kit.js"></script>
       <script type="text/javascript" src="lib/jquery/jquery.js"></script>
-      <script type="text/javascript" src="lib/three/three.min.js"></script>
-      <script type="text/javascript" src="lib/three/plugins/GLTFLoader.js"></script>
+      <script type="text/javascript" src="lib/three/three.js"></script>
+      <script type="module" async type"text/javascript" src="lib/three/plugins/DRACOloader.js"></script>
+      <script type="module" async type="text/javascript" src="lib/three/plugins/GLTFLoader.js"></script>
       <script type="text/javascript" src="lib/three/plugins/OrbitControl.js"></script>
-      <script type="text/javascript" src="lib/tween/Tween.js"></script>
-      <script type="text/javascript" src="validateForm.js"></script>
-      <script type="text/javascript" src="blackhole.js"></script>
-      <script type="text/javascript" src="index.js"></script>
+      <script async type="text/javascript" src="lib/tween/Tween.js"></script>
+      <script async type="text/javascript" src="validateForm.js"></script>
+      <script type="module" type="text/javascript" src="blackhole.js"></script>
+      <script type="module" type="text/javascript" src="index.js"></script>
       <div class="wrapper">
          <div class="background-stripes"></div>
          <div class="background-filter"></div>

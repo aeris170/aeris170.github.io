@@ -1,8 +1,19 @@
+import * as THREE from '/lib/three/three.module.js';
+import {
+  GLTFLoader
+} from '/lib/three/plugins/GLTFLoader.js';
+import {
+  DRACOLoader
+} from '/lib/three/plugins/DRACOLoader.js';
+import {
+  fadeInOutStuff
+} from '/index.js';
+
 let scene, camera, renderer, hole;
 let scaleSpeedSlow = 1 / 2000;
 let scaleSpeed = scaleSpeedSlow;
 
-function blackhole() {
+export function blackhole() {
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 5000);
   camera.rotation.x = -Math.PI / 6;
@@ -23,11 +34,14 @@ function blackhole() {
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
   });
-  let loader = new THREE.GLTFLoader();
-  loader.load('blackhole/scene.gltf', function (gltf) {
+  let loader = new GLTFLoader();
+  var dracoLoader = new DRACOLoader();
+  dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
+  loader.setDRACOLoader(dracoLoader);
+  loader.load('blackhole/dracoscene.gltf', function (gltf) {
     hole = gltf.scene.children[0];
     hole.position.y = -20;
-    hole.scale = 0;
+    hole.scale.set(0, 0, 0);
 
     let current = {
       x: Number.MIN_VALUE,

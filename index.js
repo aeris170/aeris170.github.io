@@ -1,3 +1,7 @@
+import {
+  blackhole
+} from '/blackhole.js';
+
 window.onload = function () {
   $(".slides").scrollLeft($("#home").position().left);
   $(".slides").scrollLeft($("#home").position().left);
@@ -21,7 +25,7 @@ function anchorLinkBackButtonFix() {
   });
 };
 
-function fadeInOutStuff() {
+export function fadeInOutStuff() {
   $(".slider").delay(1000).animate({
     top: '0px',
     opacity: '1',
