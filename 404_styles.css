@@ -11,7 +11,7 @@ body {
   text-indent: 2.5em;
   position: absolute;
   left: 56%;
-  top: 50%; 
+  top: 50%;
 }
 
 .mega, .bola {
@@ -24,11 +24,11 @@ body {
   height: 300px;
   position: absolute;
   left: 50%;
-  top: 50%; 
+  top: 50%;
   margin-left: -150px;
   margin-top: -150px;
 }
- 
+
 .boom {
-	color: rgb(21, 171, 0); 
+	color: rgb(21, 171, 0);
 }
