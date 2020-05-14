@@ -16,12 +16,12 @@ function changeTitle(title) {
 
 function anchorLinkBackButtonFix() {
   $(".anchor").click(function (e) {
-    e.preventDefault();
+    //e.preventDefault();
   });
 
   $(window).on('hashchange', function (e) {
-    e.preventDefault();
     $(".slides").scrollLeft($(window.location.hash).position().left - $("#about").position().left);
+    $("#projects").scrollTop($(window.location.hash).position().top);
   });
 };
 
