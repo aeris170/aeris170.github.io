@@ -2,6 +2,7 @@
 @import 'lib/skills/skill';
 @import 'lib/cards/card';
 @import 'lib/forms/form';
+@import 'lib/divider/divider';
 @import './extra_styles/colors';
 @import './extra_styles/loader';
 @import './extra_styles/background';
@@ -225,6 +226,7 @@ strong {
     cursor: pointer;
   }
 }
+
 @media all and (min-width: 2000px) {
   .page-head {
     font-size: 4rem;
@@ -261,6 +263,7 @@ strong {
     }
   }
 }
+
 @media all and (max-width: 1999px) and (min-width: 1200px) {
   .page-head {
     font-size: 4rem;
@@ -293,6 +296,7 @@ strong {
     }
   }
 }
+
 @media all and (max-width: 1199px) and (min-width: 960px) {
   .page-head {
     font-size: 4rem;
@@ -325,6 +329,7 @@ strong {
     }
   }
 }
+
 @media all and (max-width: 959px) and (min-width: 600px) {
   .page-head {
     font-size: 3rem;
@@ -369,6 +374,7 @@ strong {
     }
   }
 }
+
 @media all and (max-width: 599px) and (min-width: 320px) {
   .page-head {
     font-size: 2rem;

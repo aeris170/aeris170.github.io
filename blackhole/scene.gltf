@@ -3409,19 +3409,19 @@
   ],
   "images": [
     {
-      "uri": "textures/Blackhole_ring_baseColor.png"
+      "uri": "textures/Blackhole_ring_baseColor.webp"
     },
     {
-      "uri": "textures/Blackhole_ring_emissive.jpg"
+      "uri": "textures/Blackhole_ring_emissive.webp"
     },
     {
-      "uri": "textures/Blackhole_skin_inner_emissive.jpg"
+      "uri": "textures/Blackhole_skin_inner_emissive.webp"
     },
     {
-      "uri": "textures/Blackhole_ring2_emissive.jpg"
+      "uri": "textures/Blackhole_ring2_emissive.webp"
     },
     {
-      "uri": "textures/Blackhole_skin_emissive.jpg"
+      "uri": "textures/Blackhole_skin_emissive.webp"
     }
   ],
   "materials": [

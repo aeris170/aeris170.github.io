@@ -3,11 +3,11 @@ import {
 } from '/blackhole.js';
 
 window.onload = function () {
-  $(".slides").scrollLeft($("#home").position().left);
-  $(".slides").scrollLeft($("#home").position().left);
+  //$(".slides").scrollLeft($("#home").position().left);
+  //$(".slides").scrollLeft($("#home").position().left);
   blackhole();
   history.replaceState('', 'Home', '#home');
-  anchorLinkBackButtonFix();
+  //anchorLinkBackButtonFix();
 }
 
 function changeTitle(title) {
@@ -74,7 +74,7 @@ export function fadeInOutStuff() {
   $(".no-padding").css("padding", 0);
   $(".no-margin").css("margin", 0);
   $(".no-border").css("border", 0);
-  let lineHeight = parseInt($(".content").css("font-size").slice(0, -2)) * 1.15 + "px";
+  let lineHeight = 0 //parseInt($(".content").css("font-size").slice(0, -2)) * 1.15 + "px";
   $(".content").css("padding-bottom", lineHeight);
   $(".content").css("padding-top", lineHeight);
   $(".back").height($(".back").width() / 2);
