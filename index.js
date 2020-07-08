@@ -3,11 +3,11 @@ import {
 } from '/blackhole.js';
 
 window.onload = function () {
-  //$(".slides").scrollLeft($("#home").position().left);
-  //$(".slides").scrollLeft($("#home").position().left);
+  $(".slides").scrollLeft($("#home").position().left);
+  $(".slides").scrollLeft($("#home").position().left);
   blackhole();
   history.replaceState('', 'Home', '#home');
-  //anchorLinkBackButtonFix();
+  anchorLinkBackButtonFix();
 }
 
 function changeTitle(title) {
@@ -16,7 +16,7 @@ function changeTitle(title) {
 
 function anchorLinkBackButtonFix() {
   $(".anchor").click(function (e) {
-    //e.preventDefault();
+    e.preventDefault();
   });
 
   $(window).on('hashchange', function (e) {
