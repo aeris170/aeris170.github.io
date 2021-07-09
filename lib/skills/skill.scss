@@ -48,7 +48,7 @@
   }
 
   &[type="Unity"] {
-    color: $unity-primary;
+    color: $unity-primary; 
   }
 
   &[type="Godot"] {
@@ -96,23 +96,23 @@
   }
 
   &[type="Python"]::before {
-    @include color-width(19%, $phyton-secondary, $phyton-primary);
+    @include color-width(27%, $phyton-secondary, $phyton-primary);
   }
 
   &[type="OpenGL"]::before {
-    @include color-width(79%, $opengl-secondary, $opengl-primary);
+    @include color-width(87%, $opengl-secondary, $opengl-primary);
   }
 
   &[type="LWJGL"]::before {
-    @include color-width(80%, $lwjgl-secondary, $lwjgl-primary);
+    @include color-width(95%, $lwjgl-secondary, $lwjgl-primary);
   }
 
   &[type="Unity"]::before {
-    @include color-width(73%, $unity-secondary, $unity-primary);
+    @include color-width(81%, $unity-secondary, $unity-primary);
   }
 
   &[type="Godot"]::before {
-    @include color-width(88%, $godot-secondary, $godot-primary);
+    @include color-width(55%, $godot-secondary, $godot-primary);
   }
 
   &::before {
