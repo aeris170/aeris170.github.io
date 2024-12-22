@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+<title>Finis Principium Est</title>
+
+<style type="text/css">
+body {
+	background:
+      linear-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("bg.webp") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	background-attachment: fixed;
+    font-family: Consolas;
+    text-align: center;
+}
+
+.image {
+  width: calc(min(80vmin, 400px));
+  aspect-ratio: 1 / 1;
+  margin-top: 16px;
+  -webkit-animation: glow-image 6s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+  -moz-animation: glow-image 6s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+  animation: glow-image 6s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+.name {
+  margin: 24px 0px 0px 0px;
+  font-size: calc(min(8vmin, 48px));
+  color:#fdfdaf;
+  transform: scaleX(50%)
+  -webkit-animation: glow-text 6s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+  -moz-animation: glow-text 6s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+  animation: glow-text 6s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+.name-small {
+  margin: 0px 0px 24px 0px;
+  font-size: calc(min(3.3333vmin, 20px));
+  color:#fdfdaf;
+  transform: scaleX(50%)
+  -webkit-animation: glow-text 6s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+  -moz-animation: glow-text 6s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+  animation: glow-text 6s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+.buttons {
+    display: inline-block;
+}
+
+.button {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: calc(min(2vmin, 16px));
+    margin-bottom: 24px;
+    color: #ffffff;
+    font-size: calc(min(5vmin, 24px));
+}
+.button:hover {
+    transform: scale(1.05);
+}
+.button > i {
+    color: #FFFFFF;
+    background: #00000000;
+}
+
+.spotify {
+    background: #1ED760;
+}
+.youtube {
+    background: #FF0000;
+}
+.apple {
+    background: #FF4E6B;
+}
+.amazon {
+    background: #0077C1;
+}
+.itunes {
+    background: #800080;
+}
+
+@keyframes glow-image {
+    from {
+      box-shadow: 0 0 3px 3px #fdfdaf;
+    }
+    to {
+      box-shadow: 0 0 6px 6px #fdfdaf;
+    }
+}
+
+@keyframes glow-text {
+    from {
+      text-shadow: 0 0 20px #fdfdaf;
+    }
+    to {
+      text-shadow: 0 0 30px #fdfdaf, 0 0 10px #fdfdaf;
+    }
+}
+</style>
+</head>
+    <body>
+        <img src="cover.png" class="image">
+        <p class="name">Finis Principium Est</p>
+		<p class="name-small">Argente Gevanni</p>
+        <div class="buttons">
+            <div class="button spotify" onclick="location.href='https://open.spotify.com/track/5jpI4xYZm9TuogxTqGo0Vb?si=4596130993da4a08';">
+				<i class="fa-brands fa-spotify"></i>
+				Listen on Spotify
+            </div>
+            <div class="button youtube" onclick="location.href='https://music.youtube.com/playlist?list=OLAK5uy_n2KvaLU6KO4m81EJqnzSeWMjBXUUeTHSM&si=g9sUkAFxuSTpluwx';">
+				<i class="fa-brands fa-youtube"></i>
+				Listen on Youtube Music
+            </div>
+            <div class="button apple" onclick="location.href='https://music.apple.com/us/album/finis-principium-est/1785053185?i=1785053186';">
+              <i class="fa-brands fa-itunes"></i>
+              Listen on Apple Music
+            </div>
+            <div class="button amazon" onclick="location.href='https://music.amazon.com/albums/B0DPYKF66X?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_dEPuhRDrafxysXhzpEte5IKar';">
+              <i class="fa-brands fa-amazon"></i>
+              Listen on Amazon Music
+            </div>
+        </div>
+    </body>
+</html>
